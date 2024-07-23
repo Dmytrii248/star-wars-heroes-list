@@ -1,9 +1,18 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   root: true,
-  extends: ["@repo/eslint-config/next.js"],
+  env: { browser: true, es2022: true },
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: true,
+    ecmaFeatures: {
+      jsx: true,
+    },
+    project: false,
+    ecmaVersion: 2022,
+    sourceType: "module",
+  },
+  ignorePatterns: [".eslintrc.cjs"],
+  rules: {
+    "no-console": ["warn", { allow: ["error"] }],
   },
 };
