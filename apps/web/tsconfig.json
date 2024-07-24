@@ -30,8 +30,11 @@
 
     "baseUrl": "./app",
     "paths": {
-        "@components*": ["./src/components/*"],
-        "@interfaces/*": ["./src/interfaces/*"]
+        "@components": ["./src/components/index"],
+        "@interfaces/*": ["./src/interfaces/*"],
+        "@api": ["./src/api/api"],
+        "@assets/*": ["./assets/*"],
+        "@routes":["./src/routes/index"]
     },
     "types": [],
   },
