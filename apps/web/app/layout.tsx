@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Star Wars Heros",
+  title: "Star Wars Heroes",
   description:
     "Application to show all the Star Wars characters, Films, and ships where heroes were",
 };
