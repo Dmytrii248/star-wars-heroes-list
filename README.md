@@ -1,6 +1,5 @@
 # Star Wars Heroes
 
-## Description
 This project allows you to slide through Star Wars heroes and see in which films where they were filmed and which starships they used in those films.
 
 ### Start
