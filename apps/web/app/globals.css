@@ -36,6 +36,14 @@ a {
   text-decoration: none;
 }
 
+.react-flow__handle {
+  opacity: 0;
+}
+
+.react-flow__panel {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

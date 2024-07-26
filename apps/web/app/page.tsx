@@ -51,7 +51,7 @@ const Home = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6">
+    <div className="flex flex-col justify-center items-center gap-6 mt-4">
       <div className="flex flex-col gap-2 justify-start">
         {heroesData.results.map((e) => (
           <HeroListItem name={e.name} id={e.id} />

@@ -29,7 +29,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} text-m text-[#c8c8c8] bg-[#272b30] font-semibold`}
       >
         <div className="h-screen">
-          <main className="h-screen mt-4">{children}</main>
+          <main>{children}</main>
         </div>
       </body>
     </html>
