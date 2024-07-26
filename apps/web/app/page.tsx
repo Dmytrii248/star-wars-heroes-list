@@ -2,10 +2,10 @@
 
 import { getListOfHeroes } from "@api";
 import { HeroListItem, Pagination } from "@components";
+import { IPersonsResponse } from "@models";
 import { HOME_ROUTE } from "@routes";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { IPersonsResponse } from "src/models";
 
 const Home = () => {
   const [heroesData, setHeroesData] = useState<IPersonsResponse | null>(null);

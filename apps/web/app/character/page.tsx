@@ -2,11 +2,11 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getPersonTree } from "src/utils";
 import { ReactFlow, Node, Edge } from "@xyflow/react";
 
 import "@xyflow/react/dist/style.css";
-import { useLayoutedElements } from "src/hooks";
+import { getPersonTree } from "@utils";
+import { useLayoutedElements } from "@hooks";
 
 const Character = () => {
   const params = useSearchParams();
