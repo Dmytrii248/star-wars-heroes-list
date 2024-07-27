@@ -44,7 +44,7 @@ const Character = () => {
       <button type="button" onClick={() => router.back()}>
         Back to List
       </button>
-      <div className="h-[640]">
+      <div className="h-[640px]">
         <ReactFlow
           nodes={nodes}
           edges={edges}
