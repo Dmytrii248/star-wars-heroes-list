@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ReactFlow, Node, Edge } from "@xyflow/react";
 
@@ -9,14 +9,17 @@ import { getPersonTree } from "@utils";
 import { useLayoutedElements } from "@hooks";
 
 const Character = () => {
-  const params = useSearchParams();
   const router = useRouter();
+  const params = useParams<{ id: string }>();
+
   const [nodes, setNodes] = useState<Node[]>([]);
   const [edges, setEdges] = useState<Edge[]>([]);
+
   const getLayoutedElements = useLayoutedElements();
 
   useEffect(() => {
-    const personId = Number(params.get("id"));
+    const personId = Number(params.id);
+
     if (!personId) return;
 
     (async () => {

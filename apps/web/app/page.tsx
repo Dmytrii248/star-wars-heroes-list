@@ -4,14 +4,21 @@ import { getListOfHeroes } from "@api";
 import { HeroListItem, Pagination } from "@components";
 import { IPersonsResponse } from "@models";
 import { HOME_ROUTE } from "@routes";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const Home = () => {
-  const [heroesData, setHeroesData] = useState<IPersonsResponse | null>(null);
+const Page = ({
+  searchParams,
+}: {
+  searchParams?: {
+    page?: string;
+  };
+}) => {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const [page, setPage] = useState(Number(searchParams.get("page")) || 1);
+
+  const [heroesData, setHeroesData] = useState<IPersonsResponse | null>(null);
+  const [page, setPage] = useState(Number(searchParams?.page) || 1);
+
   const [isLoadMore, setIsLoadMore] = useState(false);
 
   useEffect(() => {
@@ -54,7 +61,7 @@ const Home = () => {
     <div className="flex flex-col justify-center items-center gap-6 mt-4">
       <div className="flex flex-col gap-2 justify-start">
         {heroesData.results.map((e) => (
-          <HeroListItem name={e.name} id={e.id} />
+          <HeroListItem name={e.name} id={e.id} key={e.id} />
         ))}
       </div>
       <Pagination
@@ -68,4 +75,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;

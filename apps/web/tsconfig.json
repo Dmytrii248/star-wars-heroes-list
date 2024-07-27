@@ -28,15 +28,15 @@
       }
     ],
 
-    "baseUrl": "./app",
+    "baseUrl": "./app/src",
     "paths": {
         "@assets/*": ["./assets/*"],
-        "@api": ["./src/api/api"],
-        "@components": ["./src/components"],
-        "@hooks": ["./src/hooks"],
-        "@models": ["./src/models"],
-        "@utils": ["./src/utils"],
-        "@routes":["./src/routes"],
+        "@api": ["./api/api"],
+        "@components": ["./components"],
+        "@hooks": ["./hooks"],
+        "@models": ["./models"],
+        "@utils": ["./utils"],
+        "@routes":["./routes/routes"],
     },
     "types": [],
   },

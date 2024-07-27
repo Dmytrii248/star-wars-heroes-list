@@ -13,7 +13,7 @@ export const HeroListItem: FC<IProps> = ({ name, id }) => {
   const router = useRouter();
 
   const heroDetails = () => {
-    router.push(`${CHARACTER_PAGE_ROUTE.basePath}?id=${id}`);
+    router.push(`${CHARACTER_PAGE_ROUTE.basePath}/${id}`);
   };
 
   return (

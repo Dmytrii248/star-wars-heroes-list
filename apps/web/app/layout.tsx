@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
-
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "./public/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "./public/fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
 });
 
@@ -18,11 +17,7 @@ export const metadata: Metadata = {
     "Application to show all the Star Wars characters, Films, and ships where heroes were",
 };
 
-export default async function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+const RootLayout = async ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <body
@@ -34,4 +29,6 @@ export default async function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

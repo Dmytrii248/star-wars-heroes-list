@@ -3,9 +3,9 @@ import { FC } from "react";
 import rightArrowIcon from "@assets/chevron_left.svg";
 
 interface IProps {
-  next: VoidFunction;
-  previous: VoidFunction;
-  loadMore: VoidFunction;
+  next: () => void;
+  previous: () => void;
+  loadMore: () => void;
   currentPage: number;
   totalPages: number;
 }
