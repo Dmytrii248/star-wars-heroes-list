@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ReactFlow, Node, Edge } from "@xyflow/react";
+import { ReactFlow, Node, Edge, Controls } from "@xyflow/react";
 
 import "@xyflow/react/dist/style.css";
 import { getPersonTree } from "@utils";
@@ -55,7 +55,9 @@ const Character = () => {
           snapToGrid
           fitView
           attributionPosition="top-right"
-        />
+        >
+          <Controls />
+        </ReactFlow>
       </div>
     </div>
   );
