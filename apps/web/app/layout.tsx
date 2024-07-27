@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
@@ -11,15 +12,10 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
 });
 
-export const metadata: Metadata = {
-  title: "Star Wars Heroes",
-  description:
-    "Application to show all the Star Wars characters, Films, and ships where heroes were",
-};
-
-const RootLayout = async ({ children }: { children: ReactNode }) => {
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
+      <title>Star Wars Heroes</title>
       <body
         className={`${geistSans.variable} ${geistMono.variable} text-m text-[#c8c8c8] bg-[#272b30] font-semibold`}
       >
