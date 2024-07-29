@@ -25,19 +25,20 @@ const Page = ({
     (async () => {
       const data = await getListOfHeroes(page);
 
-      if (isLoadMore && heroesData && data) {
-        setHeroesData({
-          ...heroesData,
-          results: [...heroesData.results, ...data.results],
-        });
+      if (!data) return null;
+
+      if (isLoadMore) {
+        setHeroesData(
+          (prev) =>
+            prev && { ...prev, results: [...prev.results, ...data.results] }
+        );
       } else {
         setHeroesData(data);
       }
     })();
 
     router.replace(`${HOME_ROUTE.basePath}/?page=${page}`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [isLoadMore, page, router]);
 
   const nextPage = () => {
     setIsLoadMore(false);
