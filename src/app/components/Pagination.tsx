@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FC } from "react";
-import rightArrowIcon from "@assets/chevron_left.svg";
+import rightArrowIcon from "../../../public/assets/chevron_left.svg";
 
 interface IProps {
   next: () => void;

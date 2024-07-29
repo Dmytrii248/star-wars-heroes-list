@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { FC } from "react";
-import { CHARACTER_PAGE_ROUTE } from "@routes";
+import { CHARACTER_PAGE_ROUTE } from "../routes/routes";
 
 interface IProps {
   name: string;

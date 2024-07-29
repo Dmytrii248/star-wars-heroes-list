@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { ReactFlow, Node, Edge, Controls } from "@xyflow/react";
 
 import "@xyflow/react/dist/style.css";
-import { getPersonTree } from "@utils";
-import { useLayoutedElements } from "@hooks";
+import { useLayoutedElements } from "../../hooks";
+import { getPersonTree } from "../../utils";
 
 const Character = () => {
   const router = useRouter();
@@ -31,6 +31,7 @@ const Character = () => {
       setNodes(layoutedNodes);
       setEdges(layoutedEdges);
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!nodes.length || !edges.length) {

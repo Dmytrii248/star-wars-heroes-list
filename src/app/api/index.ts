@@ -1,4 +1,4 @@
-import { IFilm, IPerson, IPersonsResponse, IStarship } from "@models";
+import { IFilm, IPerson, IPersonsResponse, IStarship } from "../models";
 import axios from "axios";
 
 export const getListOfHeroes = async (page: number) => {

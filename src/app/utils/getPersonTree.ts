@@ -1,5 +1,5 @@
-import { getFilmData, getHeroData, getStarshipData } from "@api";
 import { Node, Edge, XYPosition } from "@xyflow/react";
+import { getFilmData, getHeroData, getStarshipData } from "../api";
 
 const heroLabel = "_hero";
 const movieLabel = "_movie";

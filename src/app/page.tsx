@@ -1,11 +1,11 @@
 "use client";
 
-import { getListOfHeroes } from "@api";
-import { HeroListItem, Pagination } from "@components";
-import { IPersonsResponse } from "@models";
-import { HOME_ROUTE } from "@routes";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { IPersonsResponse } from "./models";
+import { getListOfHeroes } from "./api";
+import { HOME_ROUTE } from "./routes/routes";
+import { HeroListItem, Pagination } from "./components";
 
 const Page = ({
   searchParams,
@@ -36,6 +36,7 @@ const Page = ({
     })();
 
     router.replace(`${HOME_ROUTE.basePath}/?page=${page}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const nextPage = () => {
