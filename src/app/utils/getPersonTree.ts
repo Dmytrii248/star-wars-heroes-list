@@ -1,10 +1,10 @@
 import { Node, Edge, XYPosition } from "@xyflow/react";
 import { getFilmData, getHeroData, getStarshipData } from "../api";
 
-const heroLabel = "_hero";
-const movieLabel = "_movie";
-const starshipLabel = "_starship";
-const position: XYPosition = { x: 0, y: 0 };
+export const heroLabel = "_hero";
+export const movieLabel = "_movie";
+export const starshipLabel = "_starship";
+export const position: XYPosition = { x: 0, y: 0 };
 
 export const getPersonTree = async (
   personId: number

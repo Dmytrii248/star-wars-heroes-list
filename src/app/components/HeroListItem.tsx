@@ -17,7 +17,11 @@ export const HeroListItem: FC<IProps> = ({ name, id }) => {
   };
 
   return (
-    <div className="cursor-pointer" onClick={heroDetails}>
+    <div
+      className="cursor-pointer"
+      onClick={heroDetails}
+      data-testid="hero-list-item"
+    >
       {name}
     </div>
   );

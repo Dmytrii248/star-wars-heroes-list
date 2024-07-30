@@ -21,6 +21,7 @@ export const Pagination: FC<IProps> = ({
 }) => (
   <div className="flex flex-col gap-2">
     <button
+      data-testid="load-more-button"
       className="mx-auto"
       onClick={loadMore}
       disabled={currentPage === totalPages}
@@ -28,7 +29,11 @@ export const Pagination: FC<IProps> = ({
       Load more
     </button>
     <div className="flex items-center gap-4">
-      <button onClick={previous} disabled={currentPage === 1}>
+      <button
+        onClick={previous}
+        disabled={currentPage === 1}
+        data-testid="previous-button"
+      >
         <Image
           className="cursor-pointer"
           aria-hidden
@@ -39,7 +44,11 @@ export const Pagination: FC<IProps> = ({
         />
       </button>
       Page {currentPage} of {totalPages}
-      <button onClick={next} disabled={currentPage === totalPages}>
+      <button
+        onClick={next}
+        disabled={currentPage === totalPages}
+        data-testid="next-button"
+      >
         <Image
           className=" cursor-pointer rotate-180"
           aria-hidden
