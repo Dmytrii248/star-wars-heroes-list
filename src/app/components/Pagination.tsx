@@ -19,7 +19,7 @@ export const Pagination: FC<IProps> = ({
   currentPage,
   totalPages,
 }) => (
-  <div className="flex flex-col gap-2">
+  <div className="flex flex-col gap-2 mb-4">
     <button
       data-testid="load-more-button"
       className="mx-auto"
