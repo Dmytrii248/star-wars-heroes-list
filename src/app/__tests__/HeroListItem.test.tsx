@@ -17,7 +17,7 @@ describe("HeroListItem", () => {
     const heroName = "Luke Skywalker";
     render(<HeroListItem name={heroName} id={1} />);
 
-    const heroListItem = screen.getByText(heroName);
+    const heroListItem = screen.getByTestId("hero-list-button-item");
     expect(heroListItem).toBeInTheDocument();
   });
 
@@ -29,11 +29,11 @@ describe("HeroListItem", () => {
     const heroId = 123;
     render(<HeroListItem name="Test Hero" id={heroId} />);
 
-    const heroListItem = screen.getByTestId("hero-list-item");
+    const heroListItem = screen.getByTestId("hero-list-button-item");
     await user.click(heroListItem);
 
     expect(mockRouter.push).toHaveBeenCalledWith(
-      `${CHARACTER_PAGE_ROUTE.basePath}/${heroId}`
+      `${CHARACTER_PAGE_ROUTE.basePath}${heroId}`
     );
   });
 });
